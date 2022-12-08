@@ -12,7 +12,7 @@ export const ListContacts = styled.ul`
 
 export const ListContactsItem = styled.li`
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: baseline;
 `;
 
