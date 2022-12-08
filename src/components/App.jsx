@@ -1,7 +1,6 @@
-// import { nanoid } from 'nanoid';
 import { ContactForm } from './ContactForm/ContactForm';
-// import { Filter } from './Filter/Filter';
-// import { ContactList } from './ContactList/ContactList';
+import { Filter } from './Filter/Filter';
+import { ContactList } from './ContactList/ContactList';
 import { GlobalStyle } from './Utilit/GlobalStyle';
 import { getContactsArray, getIsLoading, getError } from 'redux/selectors';
 import { useSelector, useDispatch } from 'react-redux';
@@ -29,12 +28,10 @@ export const App = () => {
       {array.length === 0 ? (
         <p>Please, enter your first contact</p>
       ) : (
-          // JSON.stringify(array, null, 2)
-          console.log(array)
-        // <>
-        //   <Filter />
-        //   <ContactList />
-        // </>
+        <>
+          <Filter />
+          <ContactList />
+        </>
       )}
 
       <GlobalStyle />

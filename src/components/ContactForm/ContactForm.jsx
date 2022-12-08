@@ -24,8 +24,8 @@ export function ContactForm() {
   const addContactsItem = e => {
     e.preventDefault();
     const name = e.target.elements.name.value;
-    const number = e.target.elements.number.value;
-    const item = { name, number };
+    const phone = e.target.elements.number.value;
+    const item = { name, phone };
     e.target.reset();
 
     
