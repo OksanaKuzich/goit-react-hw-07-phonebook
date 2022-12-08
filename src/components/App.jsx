@@ -7,7 +7,6 @@ import { useSelector, useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 import { fetchContacts } from 'redux/operations';
 
-
 export const App = () => {
   const dispatch = useDispatch();
   const array = useSelector(getContactsArray);
@@ -17,15 +16,16 @@ export const App = () => {
   useEffect(() => {
     dispatch(fetchContacts());
   }, [dispatch]);
-    
+
   return (
     <div className="container">
-      {loading && <b>Loading contacts...</b>}
       {error && <b>{error}</b>}
       <h1>Phonebook</h1>
       <ContactForm />
       <h2>Contacts</h2>
-      {array.length === 0 ? (
+      {loading ? (
+        <b>Loading contacts...</b>
+      ) : array.length === 0 ? (
         <p>Please, enter your first contact</p>
       ) : (
         <>
