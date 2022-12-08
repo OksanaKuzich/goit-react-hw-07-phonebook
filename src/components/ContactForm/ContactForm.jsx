@@ -6,7 +6,7 @@ import {
 } from './ContactForm.styled';
 import { getContactsArray } from 'redux/selectors';
 import { useDispatch, useSelector } from 'react-redux';
-import { addContact } from 'redux/contactsSlice';
+import { addContact } from 'redux/operations';
 
 export function ContactForm() {
   const array = useSelector(getContactsArray);
